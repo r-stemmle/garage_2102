@@ -10,6 +10,12 @@ class Car
     @model = stats[:description].split(" ")[2]
     @color = stats[:description].split(" ")[0]
     @year = stats[:year]
-    @age = 121 - year[-2, 2].to_i
+    if year[0].to_i == 1
+      @age = 121 - year[-2, 2].to_i
+    elsif year[0].to_i == 2
+      @age = 21 - year[-2, 2].to_i
+    end
   end
+
+
 end

@@ -20,7 +20,10 @@ class CarTest < Minitest::Test
     assert_equal 54, car_1.age
   end
 
-  def test_it_can_have_different_attributes
+  def test_it_can_get_car_age_from_2000_above
+    car_1 = Car.new({description: 'Green Ford Mustang', year: '2001'})
+
+    assert_equal 20, car_1.age
   end
 
 end
